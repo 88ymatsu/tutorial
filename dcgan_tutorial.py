@@ -318,3 +318,7 @@ for epoch in range(num_epochs):
 
         iters += 1
 
+
+torch.save(netD.state_dict(), 'd_weight.model')
+
+torch.save(netG.state_dict(), 'g_weight.model')
