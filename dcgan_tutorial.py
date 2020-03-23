@@ -19,9 +19,6 @@ import torchvision.datasets as dset
 import torchvision.transforms as transforms
 import torchvision.utils as vutils
 import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
-from IPython.display import HTML
 
 # Set random seed for reproducibility
 manualSeed = 999
@@ -35,7 +32,7 @@ torch.manual_seed(manualSeed)
 
 
 # Root directory for dataset
-dataroot = "dataset/img_align_celeba/"
+dataroot = "dataset/"
 
 # Number of workers for dataloader
 workers = 2
@@ -74,8 +71,6 @@ ngpu = 1
 
 # In[3]:
 
-
-pwd
 
 
 # In[4]:
