@@ -1,0 +1,18 @@
+version: "2.3"
+services:
+  notebook:
+    image: pytorch/qrnn:ver0.2
+    # ポートの設定("ホスト：コンテナ")
+    ports:
+      - "18889:18889"
+    # 環境変数の設定
+    environment:
+      - http_proxy=$http_proxy
+      - https_proxy=$https_proxy
+    # ボリューム(データの永続化の場所)の設定(ホスト:コンテナ)
+    # ホスト内のworkディレクトリとコンテナ内の/home/jovyan/workディレクトリが紐づいているイメージ
+    volumes:
+      - /users/matsuo:/workspase
+    runtime: nvidia
+    shm_size: 16G
+    tty: true
